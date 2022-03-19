@@ -105,12 +105,7 @@ async function getUserByUsername(username) {
   }
 }
 
-const createPost = async ({
-  authorId,
-  title,
-  content,
-  tags = [], // this is new
-}) => {
+const createPost = async ({ authorId, title, content, tags = [] }) => {
   try {
     const {
       rows: [post],
@@ -368,4 +363,5 @@ module.exports = {
   getPostsByTagName,
   getAllTags,
   getUserByUsername,
+  getPostById,
 };
